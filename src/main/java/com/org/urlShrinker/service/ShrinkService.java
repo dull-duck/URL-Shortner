@@ -24,9 +24,6 @@ public class ShrinkService {
     @Autowired
     ShrinkConstants shrinkConstants;
 
-    @Autowired
-    Random random;
-
 
     //longtoshort without security
     public String longToShortSingleClick(String longUrl){
@@ -59,6 +56,7 @@ public class ShrinkService {
 
     private ShrinkModel hashingUrl(String longUrl){
         char [] result = new char[lengthOfShortUrl];
+        Random random = new Random();
         for(int i=0; i<= lengthOfShortUrl-1;i++) {
             int randomNumber = random.nextInt((elements.length() - 1));
             result[i]= elements.charAt(randomNumber);
