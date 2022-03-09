@@ -5,7 +5,8 @@ import com.org.urlShrinker.service.ShrinkService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-@RestController("/")
+@RestController
+@RequestMapping("/")
 public class ShrinkController {
 
     @Autowired
